@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $.getJSON("https://api.countapi.xyz/get/clicks/85bb3a11-5fb8-45fe-b571-2a119a4316a9", function(response) {
+    $("#span1").text(response.value);
+    });
+    </script>
+    <script>
+      function clicked() {
+        var clicks = new XMLHttpRequest();
+        clicks.open("GET", "https://api.countapi.xyz/hit/clicks/85bb3a11-5fb8-45fe-b571-2a119a4316a9");
+        clicks.responseType = "json";
+        clicks.onload = function() {
+        document.getElementById("span1").textContent=this.response.value;
+        }
+        clicks.send();
+      }
+    </script>
+    <style>
+      body{
+      margin: 0;
+      background-color: #DDD;
+      }
+      div{
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 200px;
+        height: 150px;
+        text-align: center;
+        border: 1px solid black;
+        font-family: Times New Roman;
+        background-color: #EEE;
+      }
+      button{
+        width: 100px;
+        height: 40px;
+        background-color: #1F1;
+        border: 1px solid black;
+      }
+      button:hover{
+        background-color: #8F8;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>All users have clicked the button <span id="span1">0</span> times</p>
+      <button onclick="clicked()">Click</button>
+    </div>
+  </body>
+</html>

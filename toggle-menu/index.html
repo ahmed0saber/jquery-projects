@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    /*you can use hover instead of click*/
+    $(document).ready(function(){
+    $("button").click(function(){
+    $("p"). toggle(1000);
+    });
+    });
+    </script>
+    <style>
+    p{
+      display: none;
+      background-color: #333;
+      color: #EEE;
+      margin: 0;
+      padding: 10px;
+      width: 100px;
+    }
+    button{
+      width: 120px;
+      background-color: #555;
+      color: #FFF;
+    }
+    </style>
+  </head>
+  <body>
+    <button>Click</button>
+    <p>Hello World</p>
+    <p>My name is Ahmed</p>
+    <p>A web developer from Egypt</p>
+  </body>
+</html>

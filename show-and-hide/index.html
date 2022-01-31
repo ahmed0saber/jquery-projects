@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    let x=0;
+    function show_hide(){
+      if(x%2==0)
+      {$("p").hide();}
+      else
+      {$("p").show();}
+      x++;
+    }
+    </script>
+  </head>
+  <body>
+    <button onclick="show_hide()">Click</button>
+    <p>It's me</p>
+  </body>
+</html>
